@@ -32,11 +32,11 @@
     border: white 1px solid;
 }
 
-.menu__mobileMenuIcon-img:hover{
+.menu__mobileMenuIcon-img:active{
     color: rgb(192, 192, 192);
 }
 
-.menu__mobileMenuIcon-img:hover + .menu__mobileMenuIcon-display{
+.menu__mobileMenuIcon-img:active + .menu__mobileMenuIcon-display{
     display: flex;
     flex-direction: column;
 }
