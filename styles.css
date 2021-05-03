@@ -86,10 +86,69 @@
     color: white;
     width: 113px;
     height: 28px;
-    font-family: "Segoe Ui";
+    font-family: "Segoe UI";
     font-size: 1rem;
     font-weight: 600;
 }
+
+/*Hero-Banner*/
+.hero-banner{
+    width: 100%;
+    height: 590px;
+    position: relative;
+    top: 48px;
+    background-image: url("img/banner.png");
+    background-position: 35%;
+    background-size: 250% 100%;
+    background-repeat: no-repeat;
+    font-family: "Segoe UI";  
+    
+}
+
+.hero-banner__content{
+    position: relative;
+    top:10%;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.hero-banner__content h1{
+    font-size: 3rem;
+    font-weight: normal;
+    color: white;
+}
+
+.hero-banner__content h3{
+    position: relative;
+    top: -50px;
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: white;
+    text-align: center;
+}
+
+.hero-banner__button{
+    width: 188px;
+    height: 52px;
+    background-color: #00A4EF;
+    font-family: "Segoe UI";  
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+}
+
+.hero-banner__img{
+    width: 131px;
+    height: 39px; 
+    position: relative;
+    top:30px;
+}
+
 
 @media (min-width:1200px){
     .menu{
@@ -148,5 +207,46 @@
         width: 138px;
         height: 37px;
         font-size: 16px;
+    }
+
+    /*Hero-Banner*/
+    .hero-banner{
+        width: 100%;
+        height: 820px;
+        top: 79px;
+        background-size: 100% 100%;
+    }
+
+    .hero-banner__content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 120px;
+        justify-content: space-evenly;
+    }
+
+    .hero-banner__content h1{
+        font-size: 5rem;
+    }
+
+    .hero-banner__content h3{
+        font-size: 2rem;
+    }
+
+    .hero-banner__button{
+        position: relative;
+        top:-50px;
+        width: 266px;
+        height: 67px;
+        font-size: 1.8rem;
+    }
+
+    .hero-banner__img{
+        width: 171px;
+        height: 39px; 
+        position: relative;
+        align-self: flex-end;
+        top:30px;
+        right: 250px;
     }
 }
