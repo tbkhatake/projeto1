@@ -1,3 +1,3 @@
 # projeto1
 
-Treino de merge.
+Treinamento de html, css, git e github.
