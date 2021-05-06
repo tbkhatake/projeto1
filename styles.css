@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -21,19 +22,27 @@ h1,h2,h3,h4,h5,h6{
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;
-    animation-fill-mode: forwards;
     font-family: "Segoe UI";
     font-size: 16px;
     z-index: 1;
 }
 
-.menu__icon__img{
+.menu .menu__icon .menu__icon__img{
     color: white;
     font-size: 28px;
     position: relative;
 }
 
-.menu__mobile__display{
+.menu .menu__icon .menu__icon__img:hover{
+    color: rgb(192, 192, 192);
+}
+
+.menu .menu__icon:hover + .menu__mobile__display{
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu .menu__mobile__display{
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -47,22 +56,13 @@ h1,h2,h3,h4,h5,h6{
     visibility: hidden;
 }
 
-.menu__icon__img:hover{
-    color: rgb(192, 192, 192);
-}
-
-.menu__icon:hover + .menu__mobile__display{
-    opacity: 1;
-    visibility: visible;
-  }
-
-.menu__logo-img{
+.menu .menu__mobile__display .menu__logo-img{
     width: 110px;
     height: 50px;
     margin:10px auto;
 }
 
-.menu__list{
+.menu .menu__mobile__display .menu__menu .menu__list{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,7 +70,7 @@ h1,h2,h3,h4,h5,h6{
     width: 100%;
 }
 
-.menu__item{
+.menu .menu__mobile__display .menu__menu .menu__list .menu__item{
     width: 100%;
     list-style: none;
     border-top: 1px solid white;
@@ -80,21 +80,25 @@ h1,h2,h3,h4,h5,h6{
     padding: 3px;
 }
 
-.menu__item a{
+.menu .menu__mobile__display .menu__menu .menu__list .menu__item a{
     text-decoration: none;
     color: white;
     font-size: 1.1rem;
-
 }
 
-.menu__button{
+.menu .menu__button{
     background-color: #002050;
     color: white;
+    border: none;
     width: 113px;
     height: 28px;
     font-family: "Segoe UI";
     font-size: 1rem;
     font-weight: 600;
+}
+
+.menu .menu__button:active{
+    background-color: #03142e;
 }
 
 /*########## Hero-Banner ##########*/
@@ -108,11 +112,10 @@ h1,h2,h3,h4,h5,h6{
     background-position: 35%;
     background-size: 250% 100%;
     background-repeat: no-repeat;
-    font-family: "Segoe UI"; 
-       
+    font-family: "Segoe UI";     
 }
 
-.hero-banner__content{
+.hero-banner .hero-banner__content{
     position: relative;
     top:10%;
     width: 100%;
@@ -121,16 +124,15 @@ h1,h2,h3,h4,h5,h6{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    
 }
 
-.hero-banner__content h1{
+.hero-banner .hero-banner__content h1{
     font-size: 3rem;
     font-weight: normal;
     color: white;
 }
 
-.hero-banner__content h3{
+.hero-banner .hero-banner__content h3{
     position: relative;
     top: -50px;
     font-size: 1.5rem;
@@ -139,21 +141,30 @@ h1,h2,h3,h4,h5,h6{
     text-align: center;
 }
 
-.hero-banner__button{
+.hero-banner .hero-banner__button{
     width: 188px;
     height: 52px;
     background-color: #00A4EF;
+    border: none;
     font-family: "Segoe UI";  
     font-size: 1.5rem;
     font-weight: 600;
     color: white;
 }
 
-.hero-banner__img{
+.hero-banner .hero-banner__button:active{
+    background-color:#0382bd ;
+}
+
+.hero-banner .hero-banner__img{
     width: 131px;
     height: 39px; 
     position: relative;
     top:30px;
+}
+
+.hero-banner .hero-banner__seta{
+    display: none;
 }
 
 /*########## Intro ##########*/
@@ -163,11 +174,9 @@ h1,h2,h3,h4,h5,h6{
     top:48px;
     width: 90%;
     margin:60px auto;
-    
-   
 }
 
-.intro__text{
+.intro .intro__text{
     text-align: center;
     color: #737373;
     font-family: "Segoe UI";
@@ -203,7 +212,7 @@ h1,h2,h3,h4,h5,h6{
     margin-bottom: 27px;
 }
 
-.targetBoxes__box{
+.targetBoxes .targetBoxes__box{
     width: 100%;
     height: 124px;
     display:flex;
@@ -211,17 +220,17 @@ h1,h2,h3,h4,h5,h6{
     margin-bottom: 15px;
 }
 
-.targetBoxes__box__link{
+.targetBoxes .targetBoxes__box .targetBoxes__box__link{
     position: absolute;
     width: 100%;
     height: 124px;
 }
 
-.targetBoxes__box__link:active{
+.targetBoxes .targetBoxes__box .targetBoxes__box__link:active{
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.targetBoxes__box__img{
+.targetBoxes .targetBoxes__box .targetBoxes__box__img{
     width: 15%;
     height: 100%;
     display: flex;
@@ -229,12 +238,12 @@ h1,h2,h3,h4,h5,h6{
     justify-content: center;
 }
 
-.targetBoxes__box__img img{
+.targetBoxes .targetBoxes__box .targetBoxes__box__img img{
     width: 49px;
     height: 49px;
 }
 
-.targetBoxes__box__texts{
+.targetBoxes .targetBoxes__box .targetBoxes__box__texts{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -245,18 +254,17 @@ h1,h2,h3,h4,h5,h6{
     color: white;
 }
 
-.targetBoxes__box__texts h3{
+.targetBoxes .targetBoxes__box .targetBoxes__box__texts h3{
     width: 100%;
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-.targetBoxes__box__texts p{
+.targetBoxes .targetBoxes__box .targetBoxes__box__texts p{
     width: 100%;
     font-size: 0.8rem;
 }
-
 
 .targetBoxes__box--color1{
     background-color:#0072C6;
@@ -319,7 +327,7 @@ h1,h2,h3,h4,h5,h6{
     color: #2571B7;
 }
 
-.services__content{
+.services .services__cards .services__content{
     width: 100%;
     height: 156px;
     margin: 15px auto;
@@ -328,34 +336,33 @@ h1,h2,h3,h4,h5,h6{
     align-items: center;
 }
 
-.services__texts{
+.services .services__cards .services__content img{
+    width: 70px;
+    height: 70px;
+}
+
+.services .services__cards .services__content .services__texts{
     width: 72%;
     display: flex;
     flex-direction: column;
 }
 
-.services__content img{
-    width: 70px;
-    height: 70px;
-
-}
-
-.services__texts h4{
+.services .services__cards .services__content .services__texts h4{
     font-size: 1rem;
     margin-bottom: 15px;
 }
 
-.services__texts__line{
+.services .services__cards .services__content .services__texts__line{
     display: none;
 }
 
-.services__texts p{
+.services .services__cards .services__content .services__texts p{
     font-size: 0.75rem;
     margin-bottom: 15px;  
     color: #737373;  
 }
 
-.services__button{
+.services .services__cards .services__content .services__button{
     width: 82px;
     height: 30px;
     border: 1px solid;
@@ -363,7 +370,7 @@ h1,h2,h3,h4,h5,h6{
     font-size: 0.8rem;
 }
 
-.services__button:active{
+.services .services__cards .services__content .services__button:active{
     background-color: rgb(255, 248, 225);
 }
 
@@ -404,12 +411,12 @@ h1,h2,h3,h4,h5,h6{
     margin-bottom:50px ;
 }
 
-.four-blocks__blocks{
+.four-blocks .four-blocks__blocks{
     width: 100%;
     height: 600px;
 }
 
-.four-blocks__block{
+.four-blocks .four-blocks__blocks .four-blocks__block{
     width: 100%;
     height: 150px;
     padding:0 15px;
@@ -421,14 +428,14 @@ h1,h2,h3,h4,h5,h6{
     align-items: center;
 }
 
-.four-blocks__block h4{
+.four-blocks .four-blocks__blocks .four-blocks__block h4{
     font-size: 1rem;
     font-weight: 600;
     color:#F25022;
     text-align: center;
 }
 
-.four-blocks__block p{
+.four-blocks .four-blocks__blocks .four-blocks__block p{
     font-size: 0.75rem;
     font-weight: 300;
     color:#737373;
@@ -477,47 +484,55 @@ h1,h2,h3,h4,h5,h6{
     margin-bottom: 15px;
 }
 
-.end-form__form{
+.end-form .end-form__form{
     width: 100%;
-    height: 535px;
+    height: 565px;
     max-width: 564px;
     margin: 10px auto;
     display: flex;
     flex-direction: column-reverse;/*Para poder usar o seletor + para usar o focus na label*/
     background-color: #E6E6E6;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;    
 }
 
-.end-form__label{
+.end-form .end-form__form .end-form__label{
+    position: relative;
     width: 90%;
-    margin-bottom: -20px;
+    top: 5px;
     font-size: 0.75rem;
     color: #737373;
 }
 
-.end-form__input{
+.end-form .end-form__form .end-form__input{
     width: 90%;
     height: 44px;
+    margin-bottom: 10px;
     font-size: 1rem;
     color: #737373;
+    border: none;
 }
 
-.end-form__input:focus{
+.end-form .end-form__form .end-form__input:focus{
     outline-color: #2571B7;
 }
 
-.end-form__input:focus+.end-form__label{
+.end-form .end-form__form .end-form__input:focus+.end-form__label{
     color: #2571B7;
 }
 
-#form__button{
+.end-form .end-form__form #form__button{
     height: 52px;
+    margin-bottom: 10px;
     background-color: #00A4EF;
     font-size: 1.25rem;
     font-weight: 600;
     color: white;
     border: none;
+}
+
+.end-form .end-form__form #form__button:active{
+    background-color:#0e83b9 ;
 }
 
 /*########## footer ##########*/
@@ -531,7 +546,7 @@ footer{
     font-family: "Segoe UI";
 
 }
-.logos{
+footer .logos{
     margin: 0 auto;
     width: 90%;
     max-width: 564px;
@@ -539,13 +554,13 @@ footer{
     justify-content: space-around;
 }
 
-.logos__img{
+footer .logos .logos__img{
     width: 130px;
     height: 30px;
     filter: brightness(0) saturate(100%);
 }
 
-.copyright{
+footer .copyright{
     width: 90%;
     max-width: 564px;
     margin: 20px auto;
@@ -561,11 +576,11 @@ footer{
         align-items: center;  
     }
     
-    .menu__icon{
+    .menu .menu__icon{
         display: none;
     }
     
-    .menu__mobile__display{
+    .menu .menu__mobile__display{
         opacity: 1;
         visibility: visible;
         display: flex;
@@ -580,18 +595,18 @@ footer{
         border: none;
     }
 
-    .menu__logo-img{
+    .menu .menu__mobile__display .menu__logo-img{
         width: 124px;
         height: 26px;
         margin:0px ;
     }
 
-    .menu__menu{
+    .menu .menu__mobile__display .menu__menu{
         width: 50%;
         height: 100%;
     }
     
-    .menu__list{
+    .menu .menu__mobile__display .menu__menu .menu__list{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -600,13 +615,13 @@ footer{
         height: 100%;
     }
     
-    .menu__item{
+    .menu .menu__mobile__display .menu__menu .menu__list .menu__item{
         width: 100%;
         border:none;
         font-size: 16px;
     }
 
-    .menu__button{
+    .menu .menu__button{
         width: 138px;
         height: 37px;
         font-size: 16px;
@@ -621,7 +636,7 @@ footer{
         background-size: 100% 100%;
     }
 
-    .hero-banner__content{
+    .hero-banner .hero-banner__content{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -629,15 +644,15 @@ footer{
         justify-content: space-evenly;
     }
 
-    .hero-banner__content h1{
+    .hero-banner .hero-banner__content h1{
         font-size: 5rem;
     }
 
-    .hero-banner__content h3{
+    .hero-banner .hero-banner__content h3{
         font-size: 2rem;
     }
 
-    .hero-banner__button{
+    .hero-banner .hero-banner__button{
         position: relative;
         top:-50px;
         width: 266px;
@@ -645,13 +660,19 @@ footer{
         font-size: 1.8rem;
     }
 
-    .hero-banner__img{
+    .hero-banner .hero-banner__img{
         width: 171px;
         height: 39px; 
         position: relative;
         align-self: flex-end;
-        top:30px;
+        top:100px;
         right: 250px;
+    }
+
+    .hero-banner .hero-banner__seta{
+        display: inline-block;
+        width: 55px;
+        height: 55px;
     }
 
     /*########## Intro ##########*/
@@ -661,10 +682,9 @@ footer{
         top:96px;
         margin:60px auto;
         width:83.4%;
-       
     }
     
-    .intro__text{
+    .intro .intro__text{
         text-align: center;
         color: #737373;
         font-family: "Segoe UI";
@@ -694,41 +714,41 @@ footer{
         margin-bottom: 35px;
     }
 
-    .targetBoxes__boxes{
+    .targetBoxes .targetBoxes__boxes{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
     
-    .targetBoxes__box{
+    .targetBoxes .targetBoxes__boxes .targetBoxes__box{
         width: 45%;
         height: 120px;
         margin-bottom: 20px;
     }
     
-    .targetBoxes__box__link{
+    .targetBoxes .targetBoxes__boxes .targetBoxes__box .targetBoxes__box__link{
         width: 45%;
         height: 120px;
     }
     
-    .targetBoxes__box__link:hover{
+    .targetBoxes .targetBoxes__boxes .targetBoxes__box .targetBoxes__box__link:hover{
         background-color: rgba(0, 0, 0, 0.1);
     }
     
-    .targetBoxes__box__img{
+    .targetBoxes .targetBoxes__boxes .targetBoxes__box .targetBoxes__box__img{
         width: 10%;
     }
 
-    .targetBoxes__box__img img{
+    .targetBoxes .targetBoxes__boxes .targetBoxes__box .targetBoxes__box__img img{
         width: 64px;
         height: 64px;
     }
  
-    .targetBoxes__box__texts h3{
+    .targetBoxes .targetBoxes__boxes .targetBoxes__box .targetBoxes__box__texts h3{
         font-size: 1.25rem;
     }
     
-    .targetBoxes__box__texts p{
+    .targetBoxes .targetBoxes__boxes .targetBoxes__box .targetBoxes__box__texts p{
         font-size: 1.1rem;
     }
 
@@ -746,53 +766,53 @@ footer{
         font-size: 2.5rem;
     }
 
-    .services__cards{
+    .services .services__cards{
         display: flex;
         height: 413px;
     }
       
-    .services__content{
+    .services .services__cards .services__content{
         width: 25%;
         height: 100%;
         flex-direction: column-reverse;
         justify-content: space-between;
     }
     
-    .services__texts{
-        width: 100%;
-    }
-    
-    .services__content img{
+    .services .services__cards .services__content img{
         width: 160px;
         height: 160px;
     }
+
+    .services .services__cards .services__content .services__texts{
+        width: 100%;
+    }
     
-    .services__texts h4{
+    .services .services__cards .services__content .services__texts h4{
         font-size: 1.25rem;
         text-align: center;
     }
 
-    .services__texts__line{
+    .services .services__cards .services__content .services__texts__line{
         display: inline;
         border:2px solid #0000001A ;
         width: 50px;
         margin: 0 auto;
     }
     
-    .services__texts p{
+    .services .services__cards .services__content .services__texts p{
         font-size: 1rem;
         text-align: center;
         margin: 15px auto;
     }
     
-    .services__button{
+    .services .services__cards .services__content .services__button{
         width: 110px;
         height: 41px;
         font-size: 1rem;
         margin:30px auto 0;
     }
     
-    .services__line{
+    .services .services__line{
         display: none;
         border:2px solid #0000001A ;
     }
@@ -808,13 +828,13 @@ footer{
         font-size: 2.5rem;
     }
 
-    .four-blocks__blocks{
+    .four-blocks .four-blocks__blocks{
         width: 100%;
         height: 224px;
         display: flex;
     }
 
-    .four-blocks__block{
+    .four-blocks .four-blocks__blocks .four-blocks__block{
         height: 100%;
         margin-top:3px;
         margin-left:-4px;
@@ -822,14 +842,14 @@ footer{
         border: 4px solid #DEDEDE;
     }
 
-    .four-blocks__block h4{
+    .four-blocks .four-blocks__blocks .four-blocks__block h4{
         font-size: 1.25rem;
         font-weight: 600;
         color:#F25022;
         text-align: center;
     }
 
-    .four-blocks__block p{
+    .four-blocks .four-blocks__blocks .four-blocks__block p{
         width: 73%;
         font-size: 1rem;
         font-weight: 300;
@@ -863,21 +883,20 @@ footer{
         margin-bottom: 40px;
     }
 
-    .end-form__form{
+    .end-form .end-form__form{
         height: 722px;
     }
 
-    .end-form__label{
-        margin-bottom: -30px;
+    .end-form .end-form__form .end-form__label{
         font-size: 0.9rem;
     }
 
-    .end-form__input{
+    .end-form .end-form__form .end-form__input{
         height: 56px;
         font-size: 1.25rem;
     }
 
-    #form__button{
+    .end-form .end-form__form #form__button{
         height: 67px;
     }
 
@@ -887,16 +906,16 @@ footer{
         top: 96px;
     }
 
-    .logos{
+    footer .logos{
         justify-content: space-evenly;
     }
 
-    .logos__img{
+    footer .logos .logos__img{
         width: 175px;
         height: 40px;
     }
 
-    .copyright{
+    footer .copyright{
         font-size: 0.9rem;
     }
         

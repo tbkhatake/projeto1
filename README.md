@@ -1,3 +1,3 @@
 # projeto1
 
-Treinamento.
+Treinamento de html, css, git e github.
